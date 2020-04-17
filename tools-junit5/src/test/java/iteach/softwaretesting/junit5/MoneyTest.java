@@ -100,7 +100,7 @@ class MoneyTest {
 	// 测试在进行 add 操作时，如果货币类型不同，也将抛出异常
 	// 略！
 	
-	@ParameterizedTest 
+	@ParameterizedTest(name = "{0} not equals {1}")
 	@DisplayName("使用同一个测试方法对四套数据对 Money 进行相等性测试")
 	@MethodSource("moneyProvider") 
 	void test_equality(Money m1, Money m2, boolean equality) {
